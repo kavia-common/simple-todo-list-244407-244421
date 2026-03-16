@@ -1,82 +1,98 @@
-# Lightweight React Template for KAVIA
+# React Todo App
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A minimal and responsive React todo application with a retro-inspired theme. This app allows you to add, complete, delete, and filter todos, with all data stored in your browser's localStorage. There is no backend or authentication required.
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- **Add Todo**: Quickly add new todo items using the input at the top.
+- **Mark Complete**: Click a checkbox to mark a todo as completed.
+- **Delete Todo**: Remove todos from your list instantly.
+- **Filtering**: Toggle between _All_, _Active_, and _Completed_ todos.
+- **Local Storage Persistence**: Your todos persist across browser sessions.
+- **Responsive & Minimal UI**: Works well on mobile and desktop, with a clean design and subtle retro theme.
+- **Dark/Light Theme Switcher**: Quickly switch between light and dark mode for readability and preference.  
+  _Note: To toggle theme, use the theme button at the page's top right._
 
 ## Getting Started
 
-In the project directory, you can run:
+### Prerequisites
 
-### `npm start`
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- [npm](https://www.npmjs.com/)
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation & Setup
 
-### `npm test`
+In the `todo_frontend` directory, run:
 
-Launches the test runner in interactive watch mode.
+```bash
+npm install
+```
 
-### `npm run build`
+To start the development server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm start
+```
+
+The app will be available at [http://localhost:3000](http://localhost:3000) by default.
+
+### Available Scripts
+
+- `npm start`: Runs the app in development mode.
+- `npm test`: Launches the test runner in interactive watch mode.
+- `npm run build`: Builds the app for production to the `build` folder.
+
+## Usage Instructions
+
+1. **Adding a Todo**:  
+   Enter text in the input field and press _Enter_ or click the add button.
+
+2. **Completing a Todo**:  
+   Click the checkbox next to a todo to mark it as completed or uncompleted.
+
+3. **Deleting a Todo**:  
+   Click the delete (🗑️) icon or button next to a todo to remove it.
+
+4. **Filtering Todos**:  
+   Use the filter buttons (All / Active / Completed) at the bottom to see only the desired subset.
+
+5. **Theme Switcher**:  
+   Use the theme toggle button at the top-right corner to switch between light and dark modes.
+
+_All actions automatically update your local todo list and persist between browser sessions._
+
+## Folder Structure
+
+```
+todo_frontend/
+  public/       # Static files (HTML, manifest)
+  src/          # Source code (React components, CSS)
+  package.json  # Project config and dependencies
+  README.md     # This manual
+```
 
 ## Customization
 
-### Colors
+You can modify the theme colors in `src/App.css`.  
+Adjust styles and component structure as needed in `src/`.
 
-The main brand colors are defined as CSS variables in `src/App.css`:
+## Environment Variables
 
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
+_Note: For most users, customization of environment variables is not required unless deploying to a custom environment._
 
-### Components
+Default port: **3000**
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+## Project Details
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+- **Framework:** React 18
+- **Frontend only**: No backend or database included.
+- **Monolithic architecture**: All logic and UI handled within the frontend container.
 
 ## Learn More
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React Documentation](https://react.dev/)
+- To customize further, see `src/` for component code and CSS.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_Created as a clean starting point for todo apps and React UI explorations._
